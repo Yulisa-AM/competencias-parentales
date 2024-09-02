@@ -42,6 +42,35 @@
             height: 450px;
             border: none;
         }
+        .form-container {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-container button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -50,6 +79,19 @@
     <div class="video-container">
         <h2>Video Introductorio</h2>
         <iframe src="https://www.youtube.com/embed/Vv2ag-Wu2tw?si=7gxStHtJBUxW_zo5" allowfullscreen></iframe>
+    </div>
+
+    <div class="form-container">
+        <h2>Registro de Visualización</h2>
+        <form id="registration-form">
+            <label for="parentName">Nombre del padre/madre:</label>
+            <input type="text" id="parentName" name="parentName" required>
+
+            <label for="childName">Nombre del niño/niña:</label>
+            <input type="text" id="childName" name="childName" required>
+
+            <button type="submit">Registrar Visualización</button>
+        </form>
     </div>
 
     <div class="competencia">
@@ -104,17 +146,27 @@
     <p>Por favor, completa esta <a href="https://docs.google.com/forms/d/e/1FAIpQLScmFVoxeknQ9bZogtcBW3alXtsgy6Q9b6n2koYhlgGunrdwCw/viewform?usp=sf_link" target="_blank">encuesta de satisfacción</a> para brindarnos tu opinión sobre esta cápsula.</p>
 
     <script>
-        // Registrar visualización
-        let views = JSON.parse(localStorage.getItem('views')) || [];
-        const currentPage = window.location.href;
+        // Función para registrar la visualización con nombre del padre/madre y del niño/niña
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-        if (!views.includes(currentPage)) {
-            views.push(currentPage);
-            localStorage.setItem('views', JSON.stringify(views));
-        }
+            const parentName = document.getElementById('parentName').value;
+            const childName = document.getElementById('childName').value;
+
+            let views = JSON.parse(localStorage.getItem('views')) || [];
+            const currentPage = window.location.href;
+
+            if (!views.some(view => view.url === currentPage && view.parentName === parentName && view.childName === childName)) {
+                views.push({ url: currentPage, parentName: parentName, childName: childName });
+                localStorage.setItem('views', JSON.stringify(views));
+                alert('Visualización registrada correctamente.');
+            } else {
+                alert('Ya se ha registrado una visualización para este padre/madre y niño/niña en esta página.');
+            }
+        });
 
         // Mostrar número de visualizaciones
-        console.log('Visualizaciones:', views.length);
+        console.log('Visualizaciones:', JSON.parse(localStorage.getItem('views'))?.length || 0);
     </script>
 </body>
 </html>
