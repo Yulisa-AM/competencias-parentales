@@ -3,170 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cápsulas Competencias Parentales</title>
+    <title>Cápsula Competencias Parentales</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
-            color: #333;
         }
-        h1 {
-            color: #007bff;
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
-        h2 {
-            color: #0056b3;
-        }
-        .competencia {
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 8px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .video-container {
-            margin-bottom: 20px;
+        header {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 0;
             text-align: center;
         }
-        iframe {
-            width: 100%;
-            max-width: 800px;
-            height: 450px;
-            border: none;
+        header h1 {
+            margin: 0;
         }
-        .form-container {
-            margin: 20px 0;
-            padding: 15px;
+        .form-container, .section {
             background: #fff;
+            padding: 20px;
+            margin: 20px 0;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .form-container label {
+        form label {
             display: block;
-            margin-bottom: 8px;
+            margin: 10px 0 5px;
         }
-        .form-container input {
+        form input {
             width: 100%;
             padding: 8px;
             margin-bottom: 10px;
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-        .form-container button {
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            background: #007bff;
+        form button {
+            background-color: #007BFF;
             color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
             cursor: pointer;
         }
-        .form-container button:hover {
-            background: #0056b3;
+        form button:hover {
+            background-color: #0056b3;
+        }
+        .section h2 {
+            color: #007BFF;
+        }
+        .section iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            margin: 10px 0;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section ul li {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .section ul li a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .section ul li a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Cápsulas Competencias Parentales</h1>
 
-    <div class="video-container">
-        <h2>Video Introductorio</h2>
-        <iframe src="https://www.youtube.com/embed/Vv2ag-Wu2tw?si=7gxStHtJBUxW_zo5" allowfullscreen></iframe>
+    <header>
+        <h1>Cápsula Competencias Parentales</h1>
+        <iframe src="https://www.youtube.com/embed/Vv2ag-Wu2tw" allowfullscreen></iframe>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Registro de Visualización</h2>
+            <form id="registration-form">
+                <label for="userName">Nombre del Usuario:</label>
+                <input type="text" id="userName" name="userName" required>
+
+                <label for="parentName">Nombre del padre/madre:</label>
+                <input type="text" id="parentName" name="parentName" required>
+
+                <label for="childName">Nombre del niño/niña:</label>
+                <input type="text" id="childName" name="childName" required>
+
+                <button type="submit">Registrar Visualización</button>
+            </form>
+        </div>
+
+        <button id="show-views">Mostrar Registro de Visualizaciones</button>
+
+        <div class="section">
+            <h2>Competencias Parentales Reflexivas</h2>
+            <iframe src="https://youtu.be/h9Az9PLCEQc?si=Z4x9Xf4JXxT4cDdR" allowfullscreen></iframe>
+            <ul>
+                <li>
+                    <h3>Descripción</h3>
+                    <p>La competencia parental reflexiva se refiere a la capacidad de los padres para reflexionar sobre sus propias acciones, emociones y su impacto en sus hijos. Esto incluye la autoevaluación y el ajuste continuo de sus prácticas parentales.</p>
+                    <h3>Buenas Prácticas</h3>
+                    <p>1. Autoevaluación regular de las prácticas parentales.</p>
+                    <p>2. Disposición para aprender y adaptarse a nuevas estrategias.</p>
+                    <p>3. Reflexión sobre cómo las propias experiencias y emociones influyen en la crianza.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Competencias Parentales Protectora</h2>
+            <iframe src="https://youtu.be/h9Az9PLCEQc?si=Z4x9Xf4JXxT4cDdR" allowfullscreen></iframe>
+            <ul>
+                <li>
+                    <h3>Descripción</h3>
+                    <p>La competencia parental protectora involucra la capacidad de los padres para proteger a sus hijos de peligros físicos y emocionales, asegurando un entorno seguro y saludable.</p>
+                    <h3>Buenas Prácticas</h3>
+                    <p>1. Crear un entorno físico seguro en el hogar.</p>
+                    <p>2. Brindar apoyo emocional y protección durante situaciones difíciles.</p>
+                    <p>3. Establecer límites claros y consistentes para el comportamiento de los hijos.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Competencias Parentales Vinculares</h2>
+            <iframe src="https://youtu.be/hvAPIawOuXY?si=kyj6E42UF2eOzW2c" allowfullscreen></iframe>
+            <ul>
+                <li>
+                    <h3>Descripción</h3>
+                    <p>Las competencias parentales vinculares se refieren a la habilidad de los padres para establecer y mantener relaciones afectivas sólidas y saludables con sus hijos.</p>
+                    <h3>Buenas Prácticas</h3>
+                    <p>1. Dedicar tiempo de calidad para interactuar con los hijos.</p>
+                    <p>2. Mostrar afecto y apoyo constante.</p>
+                    <p>3. Fomentar una comunicación abierta y honesta.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Competencias Parentales Formativas</h2>
+            <iframe src="https://youtu.be/pHGXMwfxfBI?si=IoQ_ARDfcz5aCiSO" allowfullscreen></iframe>
+            <ul>
+                <li>
+                    <h3>Descripción</h3>
+                    <p>Las competencias parentales formativas se centran en la capacidad de los padres para apoyar el desarrollo y la educación de sus hijos, promoviendo el aprendizaje y el crecimiento.</p>
+                    <h3>Buenas Prácticas</h3>
+                    <p>1. Proveer oportunidades de aprendizaje apropiadas para la edad.</p>
+                    <p>2. Participar activamente en el proceso educativo de los hijos.</p>
+                    <p>3. Fomentar hábitos de estudio y aprendizaje continuo.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="form-container">
+            <h2>Encuesta de Satisfacción</h2>
+            <p>Por favor, complete la encuesta para ayudarnos a mejorar:</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScmFVoxeknQ9bZogtcBW3alXtsgy6Q9b6n2koYhlgGunrdwCw/viewform?usp=sf_link" target="_blank" style="color: #007BFF; text-decoration: none;">Ir a la Encuesta de Satisfacción</a>
+        </div>
     </div>
-
-    <div class="form-container">
-        <h2>Registro de Visualización</h2>
-        <form id="registration-form">
-            <label for="parentName">Nombre del padre/madre:</label>
-            <input type="text" id="parentName" name="parentName" required>
-
-            <label for="childName">Nombre del niño/niña:</label>
-            <input type="text" id="childName" name="childName" required>
-
-            <button type="submit">Registrar Visualización</button>
-        </form>
-    </div>
-
-    <div class="competencia">
-        <h2>Competencias Parentales Reflexivas</h2>
-        <p>La competencia reflexiva permite a los padres evaluar y comprender sus propias acciones y comportamientos en el contexto de la crianza. Esto incluye la capacidad de reflexionar sobre las propias emociones y cómo estas afectan a la relación con el niño.</p>
-        <h3>Buenas Prácticas:</h3>
-        <ul>
-            <li>Reflexionar regularmente sobre las propias reacciones emocionales.</li>
-            <li>Buscar retroalimentación sobre el estilo de crianza y estar abierto a cambios.</li>
-            <li>Participar en talleres o cursos sobre habilidades de crianza.</li>
-        </ul>
-        <a href="https://youtu.be/h9Az9PLCEQc?si=Z4x9Xf4JXxT4cDdR" target="_blank">Ver video sobre Competencias Parentales Reflexivas</a>
-    </div>
-
-    <div class="competencia">
-        <h2>Competencias Parentales Protectores</h2>
-        <p>Las competencias protectoras se centran en la capacidad de los padres para proteger a sus hijos de posibles riesgos y peligros, tanto físicos como emocionales. Esto incluye la capacidad de establecer límites y mantener un entorno seguro.</p>
-        <h3>Buenas Prácticas:</h3>
-        <ul>
-            <li>Establecer reglas claras y consistentes para la seguridad del niño.</li>
-            <li>Supervisar adecuadamente las actividades del niño para evitar situaciones peligrosas.</li>
-            <li>Fomentar un ambiente en el hogar que promueva el bienestar emocional.</li>
-        </ul>
-        <a href="https://youtu.be/h9Az9PLCEQc?si=Z4x9Xf4JXxT4cDdR" target="_blank">Ver video sobre Competencias Parentales Protectores</a>
-    </div>
-
-    <div class="competencia">
-        <h2>Competencias Parentales Vinculares</h2>
-        <p>Las competencias vinculares están relacionadas con la capacidad de los padres para formar y mantener una relación emocional sólida y saludable con sus hijos. Esto incluye la construcción de un vínculo afectivo y la promoción de la comunicación efectiva.</p>
-        <h3>Buenas Prácticas:</h3>
-        <ul>
-            <li>Dedicar tiempo de calidad para pasar con el niño y fortalecer el vínculo afectivo.</li>
-            <li>Comunicar de manera abierta y sincera con el niño sobre sus emociones y experiencias.</li>
-            <li>Mostrar apoyo constante y aliento en los logros y desafíos del niño.</li>
-        </ul>
-        <a href="https://youtu.be/hvAPIawOuXY?si=kyj6E42UF2eOzW2c" target="_blank">Ver video sobre Competencias Parentales Vinculares</a>
-    </div>
-
-    <div class="competencia">
-        <h2>Competencias Parentales Formativas</h2>
-        <p>Las competencias formativas se refieren a la habilidad de los padres para fomentar el desarrollo y el aprendizaje de sus hijos a través de la enseñanza y la orientación. Esto incluye la capacidad para apoyar el crecimiento cognitivo y emocional del niño.</p>
-        <h3>Buenas Prácticas:</h3>
-        <ul>
-            <li>Proporcionar actividades educativas y estimulantes que promuevan el aprendizaje.</li>
-            <li>Apoyar y guiar al niño en la resolución de problemas y en el desarrollo de habilidades.</li>
-            <li>Fomentar la curiosidad y el amor por el aprendizaje a través de la exploración y el juego.</li>
-        </ul>
-        <a href="https://youtu.be/pHGXMwfxfBI?si=IoQ_ARDfcz5aCiSO" target="_blank">Ver video sobre Competencias Parentales Formativas</a>
-    </div>
-
-    <h2>Encuesta de Satisfacción</h2>
-    <p>Por favor, completa esta <a href="https://docs.google.com/forms/d/e/1FAIpQLScmFVoxeknQ9bZogtcBW3alXtsgy6Q9b6n2koYhlgGunrdwCw/viewform?usp=sf_link" target="_blank">encuesta de satisfacción</a> para brindarnos tu opinión sobre esta cápsula.</p>
 
     <script>
-        // Función para registrar la visualización con nombre del padre/madre y del niño/niña
+        // Función para registrar la visualización con nombre del usuario, padre/madre y niño/niña
         document.getElementById('registration-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
+            const userName = document.getElementById('userName').value;
             const parentName = document.getElementById('parentName').value;
             const childName = document.getElementById('childName').value;
 
             let views = JSON.parse(localStorage.getItem('views')) || [];
             const currentPage = window.location.href;
 
-            if (!views.some(view => view.url === currentPage && view.parentName === parentName && view.childName === childName)) {
-                views.push({ url: currentPage, parentName: parentName, childName: childName });
+            // Verifica si ya se ha registrado una visualización para esta combinación
+            if (!views.some(view => view.url === currentPage && view.userName === userName && view.parentName === parentName && view.childName === childName)) {
+                views.push({ url: currentPage, userName: userName, parentName: parentName, childName: childName });
                 localStorage.setItem('views', JSON.stringify(views));
                 alert('Visualización registrada correctamente.');
             } else {
-                alert('Ya se ha registrado una visualización para este padre/madre y niño/niña en esta página.');
+                alert('Ya se ha registrado una visualización para este usuario, padre/madre y niño/niña en esta página.');
             }
         });
 
         // Mostrar número de visualizaciones
-        console.log('Visualizaciones:', JSON.parse(localStorage.getItem('views'))?.length || 0);
+        document.getElementById('show-views').addEventListener('click', function() {
+            let views = JSON.parse(localStorage.getItem('views')) || [];
+            alert(`Número total de visualizaciones: ${views.length}`);
+        });
     </script>
 </body>
 </html>
