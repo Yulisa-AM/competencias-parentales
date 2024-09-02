@@ -55,9 +55,9 @@
     <div class="competencia">
         <h2>Competencias Parentales Reflexivas</h2>
         <p>La competencia reflexiva permite a los padres evaluar y comprender sus propias acciones y comportamientos en el contexto de la crianza. Esto incluye la capacidad de reflexionar sobre las propias emociones y cómo estas afectan a la relación con el niño.</p>
-        <a href="https://youtu.be/Vv2ag-Wu2tw?si=7gxStHtJBUxW_zo5" target="_blank">Ver video sobre Competencias Parentales Reflexivas</a>
+        <a href="https://youtu.be/h9Az9PLCEQc?si=Z4x9Xf4JXxT4cDdR" target="_blank">Ver video sobre Competencias Parentales Reflexivas</a>
     </div>
-
+    
     <div class="competencia">
         <h2>Competencias Parentales Protectores</h2>
         <p>Las competencias protectoras se centran en la capacidad de los padres para proteger a sus hijos de posibles riesgos y peligros, tanto físicos como emocionales. Esto incluye la capacidad de establecer límites y mantener un entorno seguro.</p>
@@ -78,5 +78,16 @@
 
     <h2>Encuesta de Satisfacción</h2>
     <p>Por favor, completa esta <a href="https://docs.google.com/forms/d/e/1FAIpQLScmFVoxeknQ9bZogtcBW3alXtsgy6Q9b6n2koYhlgGunrdwCw/viewform?usp=sf_link" target="_blank">encuesta de satisfacción</a> para brindarnos tu opinión sobre esta cápsula.</p>
+
+    <script>
+        // Registrar visualización
+        let views = JSON.parse(localStorage.getItem('views')) || [];
+        const currentPage = window.location.href;
+
+        if (!views.includes(currentPage)) {
+            views.push(currentPage);
+            localStorage.setItem('views', JSON.stringify(views));
+        }
+    </script>
 </body>
 </html>
