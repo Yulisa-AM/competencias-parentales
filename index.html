@@ -94,7 +94,6 @@
         <div class="form-container">
             <h2>Registro de Visualización</h2>
             <form id="registration-form">
-
                 <label for="parentName">Nombre del padre/madre:</label>
                 <input type="text" id="parentName" name="parentName" required>
 
@@ -175,11 +174,10 @@
     </div>
 
     <script>
-        // Función para registrar la visualización con nombre del usuario, padre/madre y niño/niña
+        // Función para registrar la visualización con nombre del padre/madre y niño/niña
         document.getElementById('registration-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            const userName = document.getElementById('userName').value;
             const parentName = document.getElementById('parentName').value;
             const childName = document.getElementById('childName').value;
 
@@ -187,12 +185,12 @@
             const currentPage = window.location.href;
 
             // Verifica si ya se ha registrado una visualización para esta combinación
-            if (!views.some(view => view.url === currentPage && view.userName === userName && view.parentName === parentName && view.childName === childName)) {
-                views.push({ url: currentPage, userName: userName, parentName: parentName, childName: childName });
+            if (!views.some(view => view.url === currentPage && view.parentName === parentName && view.childName === childName)) {
+                views.push({ url: currentPage, parentName: parentName, childName: childName });
                 localStorage.setItem('views', JSON.stringify(views));
                 alert('Visualización registrada correctamente.');
             } else {
-                alert('Ya se ha registrado una visualización para este usuario, padre/madre y niño/niña en esta página.');
+                alert('Ya se ha registrado una visualización para este padre/madre y niño/niña en esta página.');
             }
         });
 
