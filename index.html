@@ -4,47 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Competencias Parentales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+        p {
+            margin: 0 0 20px 0;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px 0;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Competencias Parentales</h1>
+    <header>
+        <h1>Competencias Parentales</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Competencias Parentales Reflexivas</h2>
+            <p>Aquí puedes ver información sobre las competencias parentales reflexivas.</p>
+            <a href="https://youtu.be/Vv2ag-Wu2tw?si=7gxStHtJBUxW_zo5" target="_blank">Ver Video</a>
+        </section>
 
-    <!-- Sección de Competencias Parentales Reflexivas -->
-    <h2>Competencias Parentales Reflexivas</h2>
-    <p>Aquí puedes ver información sobre las competencias parentales reflexivas.</p>
-    <a href="https://youtu.be/Vv2ag-Wu2tw?si=7gxStHtJBUxW_zo5" target="_blank">Ver Video</a>
-    <p><a href="https://drive.google.com/file/d/FILE_ID/view" target="_blank">Ver Archivo de Competencias Reflexivas</a></p>
+        <section>
+            <h2>Competencias Parentales Formativas</h2>
+            <p>Aquí puedes ver información sobre las competencias parentales formativas.</p>
+            <a href="https://youtu.be/pHGXMwfxfBI?si=IoQ_ARDfcz5aCiSO" target="_blank">Ver Video</a>
+        </section>
 
-    <!-- Sección de Competencias Parentales Formativas -->
-    <h2>Competencias Parentales Formativas</h2>
-    <p>Aquí puedes ver información sobre las competencias parentales formativas.</p>
-    <a href="https://youtu.be/pHGXMwfxfBI?si=IoQ_ARDfcz5aCiSO" target="_blank">Ver Video</a>
-    <p><a href="https://drive.google.com/file/d/FILE_ID/view" target="_blank">Ver Archivo de Competencias Formativas</a></p>
+        <section>
+            <h2>Competencias Parentales Vinculares</h2>
+            <p>Aquí puedes ver información sobre las competencias parentales vinculares.</p>
+            <a href="https://youtu.be/hvAPIawOuXY?si=kyj6E42UF2eOzW2c" target="_blank">Ver Video</a>
+        </section>
 
-    <!-- Sección de Competencias Parentales Vinculares -->
-    <h2>Competencias Parentales Vinculares</h2>
-    <p>Aquí puedes ver información sobre las competencias parentales vinculares.</p>
-    <a href="https://youtu.be/hvAPIawOuXY?si=kyj6E42UF2eOzW2c" target="_blank">Ver Video</a>
-    <p><a href="https://drive.google.com/file/d/FILE_ID/view" target="_blank">Ver Archivo de Competencias Vinculares</a></p>
+        <section>
+            <h2>Competencias Parentales Protectoras</h2>
+            <p>Aquí puedes ver información sobre las competencias parentales protectoras.</p>
+            <a href="https://youtu.be/h9Az9PLCEQc?si=Z4x9Xf4JXxT4cDdR" target="_blank">Ver Video</a>
+        </section>
 
-    <!-- Sección de Competencias Parentales Protectoras -->
-    <h2>Competencias Parentales Protectoras</h2>
-    <p>Aquí puedes ver información sobre las competencias parentales protectoras.</p>
-    <a href="https://youtu.be/h9Az9PLCEQc?si=Z4x9Xf4JXxT4cDdR" target="_blank">Ver Video</a>
-    <p><a href="https://drive.google.com/file/d/FILE_ID/view" target="_blank">Ver Archivo de Competencias Protectoras</a></p>
+        <section>
+            <h2>Registrar Visualización</h2>
+            <form>
+                <label for="nombre">Tu Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                <label for="nombre-nino">Nombre del Niño:</label>
+                <input type="text" id="nombre-nino" name="nombre-nino" placeholder="Nombre del niño">
+                <input type="button" value="Registrar Visualización" onclick="registrarVisualizacion()">
+            </form>
+        </section>
 
-    <!-- Sección de Registro de Visualización -->
-    <h2>Registrar Visualización</h2>
-    <form>
-        <label for="nombre">Tu Nombre:</label>
-        <input type="text" id="nombre" name="nombre"><br>
-        <label for="nombre-nino">Nombre del Niño:</label>
-        <input type="text" id="nombre-nino" name="nombre-nino"><br>
-        <input type="button" value="Registrar Visualización" onclick="registrarVisualizacion()">
-    </form>
+        <section>
+            <h2>Encuesta de Satisfacción</h2>
+            <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScmFVoxeknQ9bZogtcBW3alXtsgy6Q9b6n2koYhlgGunrdwCw/viewform?usp=sf_link" target="_blank">Completa nuestra Encuesta de Satisfacción</a></p>
+        </section>
+    </div>
 
-    <!-- Encuesta de Satisfacción -->
-    <h2>Encuesta de Satisfacción</h2>
-    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScmFVoxeknQ9bZogtcBW3alXtsgy6Q9b6n2koYhlgGunrdwCw/viewform?usp=sf_link" target="_blank">Completa nuestra Encuesta de Satisfacción</a></p>
+    <footer>
+        <p>&copy; 2024 Competencias Parentales. Todos los derechos reservados.</p>
+    </footer>
 
     <script>
         function registrarVisualizacion() {
